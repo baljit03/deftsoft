@@ -1,0 +1,1 @@
+<img src="{{url('images/redirect_wordpress_under_maintenance_page.jpg')}}"/>

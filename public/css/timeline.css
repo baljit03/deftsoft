@@ -1,0 +1,42 @@
+/*======= timeline CSS START HERE ====*/
+
+.timeline {list-style: none;    padding:0px;    position: relative;}
+.timeline:before { top:2px; bottom:0; position:absolute; content:" ";  width:2px; background-color:transparent; left:50%; margin-left:-1px;	border-right:2px dotted #9a9a9a;}
+.timeline > li { margin-bottom: 20px; position: relative;}
+.timeline > li:before, .timeline > li:after {  content: " ";  display: table; } .timeline > li:after { clear: both; }
+.timeline > li:before, .timeline > li:after { content: " ";  display: table;}
+.timeline > li:after { clear: both;}
+.timeline > li > .timeline-panel {width:48%; float: left; padding:0px;margin-top:-10px; position: relative;}
+.timeline > li > .timeline-badge { color: #fff; width: 16px; height: 16px; line-height: 16px; font-size: 1.4em; text-align: center; position: absolute;
+top: 0px; left: 50%; margin-left: -8px; background-color:transparent; z-index: 100; border-top-right-radius: 50%; border-top-left-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%;}
+.timeline > li.timeline-inverted > .timeline-panel { float: right; }
+.timeline > li.timeline-inverted > .timeline-panel:before { border-left-width: 0; border-right-width: 15px; left: -15px; right: auto; }
+.timeline > li.timeline-inverted > .timeline-panel:after {border-left-width: 0; border-right-width: 14px; left: -14px; right: auto; }
+.timeline-badge.primary {background-color: #2e6da4 !important;}
+.timeline-badge.success {background-color: #3f903f !important;}
+.timeline-badge.warning {background-color: #f0ad4e !important;}
+.timeline-badge.danger {background-color: #d9534f !important;}
+.timeline-badge.info {background-color: #5bc0de !important;}
+.timeline-title {margin-top: 0; color: inherit;}
+.timeline-body > p,
+.timeline-body > ul { margin-bottom: 0;}
+.timeline-body > p + p { margin-top: 5px;}
+
+@media (max-width: 767px) {
+ul.timeline:before { left: 40px;}
+ul.timeline > li > .timeline-panel { width: calc(100% - 90px); width: -moz-calc(100% - 90px); width: -webkit-calc(100% - 90px);}
+ul.timeline > li > .timeline-badge { left: 32px; margin-left: 0; top: 2px;}
+ul.timeline > li > .timeline-panel {float: right;}
+ul.timeline > li > .timeline-panel:before { border-left-width: 0; border-right-width: 15px; left: -15px; right: auto;}
+ul.timeline > li > .timeline-panel:after { border-left-width: 0; border-right-width: 14px; left: -14px; right: auto;}
+.ds-tc-service-hdd li h4{ text-align:left;}
+.ds-tc-service-hdd li p{ text-align:left;}
+.ds-tc-service-hdd li .timeline-image{ float:left;}
+}
+
+
+
+
+
+
+

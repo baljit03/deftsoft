@@ -1,0 +1,84 @@
+ 
+#wrapper nav.navbar.navbar-default {
+    background-color:;
+    border-color: #e7e7e7;
+}
+
+/* 19-01-2017 */
+#wrapper .navbar-default {
+  border-color: #e7e7e7;
+  color: #fff;
+  background-color: #0f679f;
+}
+.navbar-default .nav li a{
+  color: #fff;
+}
+.sidebar ul li a.active {
+  background-color: #09507d;
+  border-color:#333;
+}
+.navbar-default .nav a:hover, .navbar-default .nav a:focus{
+	background-color: #09507d;
+	
+}
+.sidebar ul li {
+  border-bottom: 1px solid #08466d;
+}
+.navbar-default .dropdown-menu {
+  background-color: #333;
+}
+.navbar.navbar-default.navbar-static-top.foot {
+  float: left;
+  width: 100%;
+  background-color: #0f679f;
+  color:#fff;
+}
+.navbar.navbar-default.navbar-static-top.foot .navbar-header {
+  padding-left: 15px;
+}
+
+.add_new {
+  margin-top: 15px;
+  text-align: center;
+}
+.add_new a{
+	 background: #333 none repeat scroll 0 0;
+  border-radius: 15px;
+  color: #fff;
+  padding: 5px 20px;
+  text-decoration:none;
+}
+.panel.panel-default a.editPage{
+	background: #0f679f;
+	border-radius: 15px;
+  padding: 3px 18px;
+  text-decoration:none;
+  color: #fff;
+}
+.panel.panel-default a.deleteaPage{
+	background: #f00;
+	border-radius: 15px;
+  padding: 3px 18px;
+  text-decoration:none;
+  color: #fff;
+}
+#access_control_form th {
+  background: #333 none repeat scroll 0 0;
+  border-right: 1px solid #444;
+  color: #fff;
+  padding: 3px 15px;
+}
+#access_control_form td{
+	padding:5px 0;
+	text-align:center;
+}
+#access_control_form tr:nth-child(2n+1) {
+  background: #f7f7f7;
+}
+#access_control_form {
+  text-align: center;
+}
+#access_control_form table {
+  border: 1px solid #eee;
+  display: inline-block;
+}
