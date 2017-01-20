@@ -29,7 +29,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{{url('admin/dashboard')}}">Deftsoft Admin</a>
+                    <a class="navbar-brand" href="{{url('admin/dashboard')}}"><img src="../images/logo-white.png" alt="logo"/></a>
                 </div>
                 <!-- /.navbar-header -->
 
@@ -61,5 +61,6 @@
             <!----------Footer -------------->
             @include('admin.footer')
             <!----------Footer -------------->
+           
     </body>
 </html>

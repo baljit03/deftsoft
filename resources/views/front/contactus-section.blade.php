@@ -60,9 +60,6 @@
                         </p>
                     </div>
                 </div>
-                <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                    @include('front.capcha-section')
-                </div>
             </div>
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 ds-submit-btn-outer">
@@ -139,22 +136,6 @@
             },
         },
         submitHandler: function (form) {
-            var total = parseInt($('.rand1').html()) + parseInt($('.rand2').html());
-            var total1 = $('#total').val();
-            if (total1 == '') {
-                $("#capcha_message").html("<span style='color:red'>Please validate capcha!</span>");
-                return false;
-            }
-            if (total != total1)
-            {
-                $("#capcha_message").html("<span style='color:red'>wrong capcha!</span>");
-                randomnum();
-                return false;
-            }
-            else
-            {
-                $("#capcha_message").html("<span style='color:green'>Validate!</span>");
-            }
             form.submit();
         }
 

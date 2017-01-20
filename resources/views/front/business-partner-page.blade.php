@@ -175,7 +175,10 @@
                                 </div>
                             </div>
                             <div class="col-sm-6 form-group captcha">
-                                @include('front.capcha-section')
+                                <div class="captcha-img"><img src="images/captcha.png"  alt=""/></div>
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <input type="text" class="form-control">
                             </div>
                             <div class="ds-first-btn-outer"> 
                                 <input type="hidden" name="_token" value="{{csrf_token()}}"/>
@@ -320,20 +323,10 @@
 
     </script>
     <script>
-        jQuery.validator.addMethod("nameCustom", function (value, element) {
-            return this.optional(element) || /^[a-zA-Z'\s]+$/i.test(value);
-
-        }, "Please Fill Correct Value in Field.");
-        jQuery.validator.addMethod("messageCustom", function (value, element) {
-            return this.optional(element) || /^[a-zA-Z0-9'\s]+$/i.test(value);
-
-        }, "Please Fill Correct Value in Field.");
         $("body #business_partner_form").validate({
             rules: {
                 name: {
-                    required: true,
-                    nameCustom: true,
-                    maxlength: 20
+                    required: true
                 },
                 email: {
                     required: true,
@@ -345,9 +338,7 @@
             },
             messages: {
                 name: {
-                    required: "Please enter name",
-                    nameCustom: "Please enter vaild name",
-                    maxlength: "name allows only 20 characters "
+                    required: "Please enter name"
                 },
                 email: {
                     required: "Please enter email",
@@ -358,22 +349,6 @@
                 },
             },
             submitHandler: function (form) {
-                var total = parseInt($('.rand1').html()) + parseInt($('.rand2').html());
-                var total1 = $('#total').val();
-                if (total1 == '') {
-                    $("#capcha_message").html("<span style='color:red'>Please validate capcha!</span>");
-                    return false;
-                }
-                if (total != total1)
-                {
-                    $("#capcha_message").html("<span style='color:red'>wrong capcha!</span>");
-                    randomnum();
-                    return false;
-                }
-                else
-                {
-                    $("#capcha_message").html("<span style='color:green'>Validate!</span>");
-                }
                 form.submit();
             }
 

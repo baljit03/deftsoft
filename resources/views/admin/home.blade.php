@@ -2,7 +2,7 @@
 @section('title', 'Admin | Deftsoft')
 @section('content')
 @include('admin.leftMenu')
-<div id="page-wrapper">
+<div id="page-wrapper" class="homepage">
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">Dashboard</h1>
@@ -290,6 +290,7 @@
                  /.col-lg-4 
             </div>-->
             <!-- /.row -->
+        </div>
         </div>
 @endsection
 

@@ -75,13 +75,13 @@
                 <strong>Success!</strong> {!!Session::get('message')!!}
             </div>
             <script>
-                $('html,body').animate({scrollTop: $(document).height() * 1 - $(window).height()}, 500);
+                 $('html,body').animate({scrollTop: $(document).height() * 1 - $(window).height()}, 500);
                 setTimeout(function () {
                     $("#msg_div").remove();
                 }, 8000);
             </script>
             @endif
-
+           
             <div id="parentHorizontalTab" class="ds-tabs-main-outer">
                 <ul class="resp-tabs-list main-tab-list hor_1">
                     <li><div class="tab-wrap"><div class="tab-li php-tab"><span><i class="fa fa-image"></i></span>PHP<br> DEVELOPEMENT</div><div class="overlay"><img src="images/iphone-tab-img.jpg" alt="img"/></div></div></li>
@@ -95,104 +95,104 @@
                 <div class="resp-tabs-container tabs-custom-body-outer hor_1">
                     <div class="ds-tabs-inner php-tab">
                         <!----------------Accordian------------------------------>
+                         
+                                <div class="col-md-12">
+                                    <div class="panel-group" id="accordion">
 
-                        <div class="col-md-12">
-                            <div class="panel-group" id="accordion">
-
-                                <div class="panel panel-default">
-                                    <?php
-                                    $v = 0;
-                                    if (count($dataArray["childPostData"]["openingData"]["PHP"]->jobs) > 0) {
-                                        foreach ($dataArray["childPostData"]["openingData"]["PHP"]->jobs as $key => $val) {
-                                            ?>	
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                    <a data-toggle="collapse" data-parent="#accordion" href="#php_{{$key}}"><span class="glyphicon glyphicon-file pull-right">
-                                                        </span>{{$val->job_title}}</a>
-                                                </h4>
-                                            </div>
-                                            <div id="php_{{$key}}" class="panel-collapse collapse <?php echo $v == 0 ? 'in' : ''; ?>">
-                                                <ul class="job-cat-1">
-                                                    <li class="col-md-4 col-sm-4 col-xs-6">
-                                                        <div class="job-content">
-                                                            <figure>
-                                                                <img src="images/bag-img.png" alt=""/>
-                                                            </figure>
-                                                            <h3>Job Title:</h3>
-                                                            <p>Php Team Lead</p>
-                                                        </div>
-                                                    </li>
-                                                    <li class="col-md-4 col-sm-4 col-xs-6">
-                                                        <div class="job-content">
-                                                            <figure>
-                                                                <img src="images/bag-img.png" alt=""/>
-                                                            </figure>
-                                                            <h3>Job CATEGORY:</h3>
-                                                            <p>{{$val->job_title}}</p>
-                                                        </div>
-                                                    </li>
-                                                    <li class="col-md-4 col-sm-4 col-xs-6">
-                                                        <div class="job-content">
-                                                            <figure>
-                                                                <img src="images/bag-img.png" alt=""/>
-                                                            </figure>
-                                                            <h3>EXPERIENCE REQUIRED:</h3>
-                                                            <p>{{$val->exp_required}}</p>
-                                                        </div>
-                                                    </li> 
-                                                    <li class="col-md-4 col-sm-4 col-xs-6">
-                                                        <div class="job-content">
-                                                            <figure>
-                                                                <img src="images/bag-img.png" alt=""/>
-                                                            </figure>
-                                                            <h3>JOB LOCATION:</h3>
-                                                            <p>{{$val->job_location}}</p>
-                                                        </div>
-                                                    </li>
-                                                    <li class="col-md-4 col-sm-4 col-xs-6">
-                                                        <div class="job-content">
-                                                            <figure>
-                                                                <img src="images/bag-img.png" alt=""/>
-                                                            </figure>
-                                                            <h3>Job SUMMARY:</h3>
-                                                            <p>{!!$val->job_summary!!}</p>
-                                                        </div>
-                                                    </li>
-                                                    <li class="col-md-4 col-sm-4 col-xs-6">
-                                                        <div class="job-content">
-                                                            <figure>
-                                                                <img src="images/bag-img.png" alt=""/>
-                                                            </figure>
-                                                            <h3>Professional Education</h3>
-                                                            <p>{{$val->profession_exp}}</p>
-                                                        </div>
-                                                    </li>
-                                                    <li class="col-md-12 col-sm-12 col-xs-12">
-                                                        <div class="job-content">
-                                                            <figure>
-                                                                <img src="images/bag-img.png" alt=""/>
-                                                            </figure>
-                                                            <h3>SKILLS REQUIRED:</h3>
-                                                            <p>{!!$val->skills!!}</p>
-                                                        </div>
-                                                    </li>                                                     
-                                                </ul>
-                                                <div class="ds-first-btn-outer margin-top-15"> <a href="javascript:void(0);" class="applyForJob" data-jobid ="{{$val->id}}" >Apply Now!</a> </div>	 
-                                            </div> 
-
+                                        <div class="panel panel-default">
                                             <?php
-                                            $v++;
-                                        }
-                                    } else {
-                                        ?>
-                                        <p>No Job Found!</p>
-                                        <?php
-                                    }
-                                    ?>			
-                                </div>
-                            </div>
-                        </div>
+                                            $v = 0;
+                                            if (count($dataArray["childPostData"]["openingData"]["PHP"]->jobs) > 0) {
+                                                foreach ($dataArray["childPostData"]["openingData"]["PHP"]->jobs as $key => $val) {
+                                                    ?>	
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                            <a data-toggle="collapse" data-parent="#accordion" href="#php_{{$key}}"><span class="glyphicon glyphicon-file pull-right">
+                                                                </span>{{$val->job_title}}</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="php_{{$key}}" class="panel-collapse collapse <?php echo $v == 0 ? 'in' : ''; ?>">
+                                                        <ul class="job-cat-1">
+                                                            <li class="col-md-4 col-sm-4 col-xs-6">
+															<div class="job-content">
+															<figure>
+																<img src="images/bag-img.png" alt=""/>
+															</figure>
+                                                                <h3>Job Title:</h3>
+                                                                <p>Php Team Lead</p>
+																</div>
+                                                            </li>
+                                                            <li class="col-md-4 col-sm-4 col-xs-6">
+															<div class="job-content">
+																<figure>
+																	<img src="images/bag-img.png" alt=""/>
+																</figure>
+																	<h3>Job CATEGORY:</h3>
+																	<p>{{$val->job_title}}</p>
+															</div>
+                                                            </li>
+                                                            <li class="col-md-4 col-sm-4 col-xs-6">
+															<div class="job-content">
+															<figure>
+																<img src="images/bag-img.png" alt=""/>
+															</figure>
+                                                                <h3>EXPERIENCE REQUIRED:</h3>
+                                                                <p>{{$val->exp_required}}</p>
+																</div>
+                                                            </li> 
+                                                            <li class="col-md-4 col-sm-4 col-xs-6">
+															<div class="job-content">
+															<figure>
+																<img src="images/bag-img.png" alt=""/>
+															</figure>
+                                                                <h3>JOB LOCATION:</h3>
+                                                                <p>{{$val->job_location}}</p>
+																</div>
+                                                            </li>
+                                                            <li class="col-md-4 col-sm-4 col-xs-6">
+															<div class="job-content">
+															<figure>
+																<img src="images/bag-img.png" alt=""/>
+															</figure>
+                                                                <h3>Job SUMMARY:</h3>
+                                                                <p>{!!$val->job_summary!!}</p>
+																</div>
+                                                            </li>
+                                                            <li class="col-md-4 col-sm-4 col-xs-6">
+															<div class="job-content">
+															<figure>
+																<img src="images/bag-img.png" alt=""/>
+															</figure>
+                                                                <h3>Professional Education</h3>
+                                                                <p>{{$val->profession_exp}}</p>
+																</div>
+                                                            </li>
+                                                            <li class="col-md-12 col-sm-12 col-xs-12">
+															<div class="job-content">
+															<figure>
+																<img src="images/bag-img.png" alt=""/>
+															</figure>
+                                                                <h3>SKILLS REQUIRED:</h3>
+                                                                <p>{!!$val->skills!!}</p>
+																</div>
+                                                            </li>                                                     
+                                                        </ul>
+                                                        <div class="ds-first-btn-outer margin-top-15"> <a href="javascript:void(0);" class="applyForJob" data-jobid ="{{$val->id}}" >Apply Now!</a> </div>	 
+                                                    </div> 
 
+                                                    <?php
+                                                    $v++;
+                                                }
+                                            } else {
+                                                ?>
+                                                <p>No Job Found!</p>
+                                                <?php
+                                            }
+                                            ?>			
+                                        </div>
+                                    </div>
+                                </div>
+                          
 
                         <!----------------Accordian------------------------------>
                     </div>
@@ -745,33 +745,18 @@
             HTML_TEMP += 'Upload Resume : <input accept=".csv,.pdf,.docx,.doc,.txt" type="file" name="job_person_resume"/><br/>';
             HTML_TEMP += '<input type="hidden" value="{{csrf_token()}}" name="_token"/>';
             HTML_TEMP += '<input type="hidden" value="' + value + '" name="job_id"/>';
-            HTML_TEMP += '<div>Please Validate the following expersion:</div><div class="rand1"></div>';
-            HTML_TEMP += '<div>+</div><div class="rand2"></div><a href="javascript:void(0);" onclick="randomnum();">Refresh</a>';
-            HTML_TEMP += '<p id="capcha_message"></p><input type="text" id="total" autocomplete="off"  />';
-
             HTML_TEMP += '<input type="submit" id="jobApplicationBtn" class="btn btn-primary" value="Apply"/>';
             HTML_TEMP += '</form>';
 
             $("#mainpopup").show();
             $("#mainpopup_content").html(HTML_TEMP);
-            randomnum();
         });
         $("body").on("click", "#jobApplicationBtn", function () {
-            jQuery.validator.addMethod("nameCustom", function (value, element) {
-                return this.optional(element) || /^[a-zA-Z'\s]+$/i.test(value);
-
-            }, "Please Fill Correct Value in Field.");
-            jQuery.validator.addMethod("messageCustom", function (value, element) {
-                return this.optional(element) || /^[a-zA-Z0-9'\s]+$/i.test(value);
-
-            }, "Please Fill Correct Value in Field.");
 
             $("body #jobApplication").validate({
                 rules: {
                     job_person_name: {
-                        required: true,
-                        nameCustom: true,
-                        maxlength: 20
+                        required: true
                     },
                     job_person_email: {
                         required: true,
@@ -781,7 +766,7 @@
                         required: true,
                         number: true,
                         minlength: 10,
-                        maxlength: 12
+                        maxlength: 11
                     },
                     job_person_resume: {
                         required: true
@@ -790,13 +775,11 @@
                 },
                 messages: {
                     job_person_name: {
-                        required: "Please enter name",
-                        nameCustom: "Please enter vaild name",
-                        maxlength: "name allows only 20 characters "
+                        required: "Please enter name"
                     },
                     job_person_email: {
                         required: "Please enter email",
-                        email: "Please enter vaild email"
+                        email: "Please enter vaild  email"
                     },
                     job_person_phone: {
                         required: "Please enter phone number",
@@ -809,22 +792,6 @@
                     }
                 },
                 submitHandler: function (form) {
-                    var total = parseInt($('.rand1').html()) + parseInt($('.rand2').html());
-                    var total1 = $('#total').val();
-                    if (total1 == '') {
-                        $("#capcha_message").html("<span style='color:red'>Please validate capcha!</span>");
-                        return false;
-                    }
-                    if (total != total1)
-                    {
-                        $("#capcha_message").html("<span style='color:red'>wrong capcha!</span>");
-                        randomnum();
-                        return false;
-                    }
-                    else
-                    {
-                        $("#capcha_message").html("<span style='color:green'>Validate!</span>");
-                    }
                     form.submit();
                 }
             });
@@ -837,57 +804,4 @@
             border-color: rgb(53, 126, 189);
         }
         .glyphicon { margin-right:5px; }</style>
-
-    <style type="text/css">
-        .rand1, .rand2
-        {
-            padding: 16px;
-            background-color: #ADDB4B;
-            margin: 25px 0;
-            float: left;
-            border-radius: 49px;
-        }
-        .plus
-        {
-            padding: 16px 0;
-            margin: 25px 7px;
-            float: left;
-        }
-        .re
-        {
-            padding:8px;
-            background-color:#D8A217;
-            margin:35px;
-            float:left; cursor:pointer;
-            box-shadow: 2px 2px 2px 1px #818181;
-            -moz-box-shadow: 2px 2px 2px 1px #818181;
-            -webkit-box-shadow: 2px 2px 2px 1px #818181;
-            -ms-box-shadow: 2px 2px 2px 1px #818181;
-            -o-box-shadow: 2px 2px 2px 1px #818181;
-        }
-
-        #total
-        {
-            margin:35px;
-            height:30px;
-            width:50px;
-        }
-
-    </style>
-    <script>
-        $(document).ready(function () {
-            randomnum();
-        });
-        function randomnum()
-        {
-            var number1 = 5;
-            var number2 = 50;
-            var randomnum = (parseInt(number2) - parseInt(number1)) + 1;
-            var rand1 = Math.floor(Math.random() * randomnum) + parseInt(number1);
-            var rand2 = Math.floor(Math.random() * randomnum) + parseInt(number1);
-            $(".rand1").html(rand1);
-            $(".rand2").html(rand2);
-        }
-    </script>
-
     @endsection

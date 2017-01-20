@@ -4,7 +4,7 @@
 @include('admin.leftMenu')
 
 
-<div id="page-wrapper">
+<div id="page-wrapper" class="manage-pages">
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">Manage Users</h1>
@@ -16,9 +16,10 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Manage Users
+                    <h4 class="pull-left">Add New User </h4>
+                                    <a href="{{url('admin/add-new-user')}}" class="btn btndefault pull-right"><i class="fa fa-plus"></i> Add New</a>
                 </div>
-                <a href="{{url('admin/add-new-user')}}">Add New User</a>
+
                 <!-- /.panel-heading -->
                 <div id="mainMessageDv">
                     @if(Session::has('message'))

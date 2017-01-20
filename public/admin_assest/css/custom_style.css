@@ -82,3 +82,173 @@
   border: 1px solid #eee;
   display: inline-block;
 }
+
+
+/* 20-01-2017 */
+/* ========================== */
+#page-wrapper { 
+	margin: 40px 0 0 250px; 
+}
+#wrapper nav.navbar.navbar-default.navbar-static-top{
+	box-shadow:0 0 13px rgba(0,0,0,0.3);
+	-webkit-box-shadow:0 0 13px rgba(0,0,0,0.3);
+	-moz-box-shadow:0 0 13px rgba(0,0,0,0.3);
+	-ms-box-shadow:0 0 13px rgba(0,0,0,0.3);
+	top: 0;
+	border: none;
+	position: fixed;
+	width: 100%;
+	background:#3B9EEF
+}
+#wrapper nav.navbar.navbar-default.navbar-static-top > ul > li {
+	margin:0;
+	background:#337AB7
+}
+#wrapper nav.navbar.navbar-default.navbar-static-top li .dropdown-toggle {
+	padding: 21px;
+	margin: 0;
+}
+#wrapper .navbar-default.sidebar{
+	margin-top: 0;
+	background: #212121;
+	position: fixed;
+	bottom: 0;
+	top: 62px;
+}
+#wrapper .navbar-default.sidebar ul li{
+	border-color: #000
+}
+
+#wrapper .navbar-default.sidebar ul li a{
+	font-size: 13px;
+	font-weight: 300;
+}
+.navbar-header .navbar-brand img {
+	width: 210px;
+}
+.navbar-header .navbar-brand {
+	float: left;
+	height: auto;
+	padding: 6px 0 6px 15px;
+	font-size: 18px;
+	line-height: 20px;
+}
+#wrapper .navbar.navbar-default.footer-copy {
+	text-align: center;
+}
+#wrapper .navbar.navbar-default.footer-copy .navbar-header {
+	display: inline-block;
+	float: none;
+	padding-left: 18%;
+}
+#wrapper .navbar.navbar-default.footer-copy{
+	height: auto;
+	padding: 5px 0;
+	background: #ccc;
+	min-height: auto;
+	border:0;
+	border-top: 1px solid #999;
+	border-radius: 0
+}
+#wrapper .navbar.navbar-default.footer-copy p{
+	font-weight: 300;
+	color: #333;
+	margin:0
+}
+#wrapper .navbar-default.sidebar ul li a:hover, #wrapper .navbar-default.sidebar ul li a:focus, #wrapper .navbar-default.sidebar ul li a.active, #wrapper .navbar-default.sidebar ul li a:active{
+	background:#3B9EEF
+}
+
+
+
+.homepage .panel-primary {
+    border-color: #3B9EEF;
+}
+.homepage .panel-primary > .panel-heading{
+	background-color: #3B9EEF;
+border-color: #3B9EEF;
+}
+
+
+.manage-pages .panel-heading{
+	display: inline-block;
+	width: 100%
+}
+
+.manage-pages .panel-heading h4{
+	margin: 6px 0 0 0
+}
+.btndefault{
+	padding: 6px 10px;
+	border: 1px solid #ccc;
+	background: #fff;
+	color: #212121
+}
+.btndefault:hover{
+	box-shadow: 0 0 5px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+	-ms-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.panel.panel-default a.editPage {
+	background: #3B9EEF;
+}
+.panel.panel-default a.editPage:hover, .panel.panel-default a.deleteaPage:hover{
+	box-shadow: 0 0 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0 0 3px rgba(0,0,0,0.5);
+	-ms-box-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+
+.edit-btn{
+	    background: #3B9EEF;
+    border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+    padding: 3px 18px;
+    text-decoration: none;
+    color: #fff;
+}
+.delete-btn{
+	    background: #f00;
+    border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+    padding: 3px 18px;
+    text-decoration: none;
+    color: #fff;
+}
+.edit-btn:hover, .delete-btn:hover{
+	box-shadow: 0 0 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0 0 3px rgba(0,0,0,0.5);
+	-ms-box-shadow: 0 0 3px rgba(0,0,0,0.5);
+	color: #fff;
+	text-decoration: none
+}
+
+table.dataTable thead .sorting::after, table.dataTable thead .sorting_asc::after {
+	display: none
+}
+table.dataTable thead th, table.dataTable thead td, table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc, table.dataTable thead .sorting_asc_disabled, table.dataTable thead .sorting_desc_disabled {
+	font-size: 12px;
+	background-color: #212121;
+	color: #fff;
+	padding: 10px 14px 10px 8px;
+}
+table.table.table-striped img {
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	border: 2px solid #cccccc;
+}
+table.dataTable tbody td, table.dataTable tbody td, table.dataTable tbody .sorting, table.dataTable tbody .sorting_asc, table.dataTable tbody .sorting_desc, table.dataTable tbody .sorting_asc_disabled, table.dataTable tbody .sorting_desc_disabled {
+	padding: 8px 10px;
+	vertical-align: middle;
+	font-size: 12px;
+}

@@ -68,7 +68,7 @@
                                                     <input  type="text" class="form-control" id="name" name="name" Placeholder="Your Name" required>
                                                 </div>
                                                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                                    <input  type="text" class="form-control" id="mobile" name="phone_number" maxlength="12"  Placeholder="Phone Number" required>  
+                                                    <input  type="text" class="form-control" id="mobile" name="phone_number"  Placeholder="Phone Number" required>  
                                                 </div>
                                                 <div class="form-group col-md-12 col-sm-12 col-xs-12">
                                                     <input  type="text" class="form-control" id="email" name="email" Placeholder="Your Email id" required> 
@@ -79,14 +79,11 @@
                                                         <span>Characters remaining: <span id="rem_post" title="1000">1000</span></span>
                                                     </p>
                                                 </div>
-                                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                                    @include('front.capcha-section')
-                                                </div>
                                             </div>
                                             <div class="col-xs-12 col-sm-12 col-md-12 ds-submit-btn-outer">
                                                 <div class="form-group">
                                                     <input type="hidden" name="_token" value="{{csrf_token()}}"/>
-                                                    <input type="submit" name="Submit" id="contactFormSubmit" value="Submit" class="submit-btn">
+                                                    <input type="submit" name="Submit" value="Submit" class="submit-btn">
                                                 </div>
                                             </div>
                                         </form> 
@@ -110,11 +107,6 @@
         $("#header_menu li").eq(4).addClass('active');
     </script>
     <script>
-
-
-
-
-
         $("#message").keyup(function () {
             var cmax = 1000;// $("#rem_" + $(this).attr("id")).attr("title");
 
@@ -180,22 +172,6 @@
                 },
             },
             submitHandler: function (form) {
-                var total = parseInt($('.rand1').html()) + parseInt($('.rand2').html());
-                var total1 = $('#total').val();
-                if (total1 == '') {
-                    $("#capcha_message").html("<span style='color:red'>Please validate capcha!</span>");
-                    return false;
-                }
-                if (total != total1)
-                {
-                    $("#capcha_message").html("<span style='color:red'>wrong capcha!</span>");
-                    randomnum();
-                    return false;
-                }
-                else
-                {
-                    $("#capcha_message").html("<span style='color:green'>Validate!</span>");
-                }
                 form.submit();
             }
 

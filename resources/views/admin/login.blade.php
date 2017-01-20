@@ -49,7 +49,7 @@
                         </div>
                         @endif
                         <div class="panel-body">
-                            <form action="{{url('admin/login-check')}}"  method="post" name="login_form" id="admin_login_form">
+                            <form action="admin/login-check"  method="post" name="login_form" id="admin_login_form">
                                 <fieldset>
                                     <div class="form-group">
                                         <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>

@@ -4,7 +4,7 @@
 @include('admin.leftMenu')
 
 
-<div id="page-wrapper">
+<div id="page-wrapper" class="manage-pages">
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">Manage Portfolio</h1>
@@ -16,7 +16,8 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Manage Portfolio
+                    <h4 class="pull-left">Add New Portfolio</h4>
+                     <a href="{{url('admin/add-new-portfolio')}}" class="btn btndefault pull-right"><i class="fa fa-plus"></i> Add New</a>
                 </div>
                 <!-- /.panel-heading -->
                 <div id="mainMessageDv">
@@ -33,7 +34,7 @@
 
                     @endif
                 </div>
-                <a href="{{url('admin/add-new-portfolio')}}">Add New Portfolio</a>
+               
                 <div class="panel-body">
                     <table  width="100%" class="table table-striped table-bordered table-hover" id="myTable">
                         <thead>
@@ -67,8 +68,8 @@
 
                                 <td>{{$val->status}}</td>
                                 <td>{{date("Y-m-d",strtotime($val->created_at))}}</td>
-                                <td><a href="{{ url('/admin/edit-portfolio/'.$val->id)}}"  class="editPortfolio">Edit</a></td>
-                                <td><a href="javascript:void(0);" data-val="{{$val->id}}" class="deletePortfolio">Delete</a></td>
+                                <td><a href="{{ url('/admin/edit-portfolio/'.$val->id)}}"  class="editPortfolio edit-btn">Edit</a></td>
+                                <td><a href="javascript:void(0);" data-val="{{$val->id}}" class="deletePortfolio delete-btn">Delete</a></td>
                             </tr>
                             @endforeach
                             @else
